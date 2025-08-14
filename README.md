@@ -1,0 +1,1 @@
+A todo list app is a digital tool designed to help users manage and organize tasks or to-dos. These apps allow users to create lists of items they need to complete, prioritize them, set reminders, and track their progress. They are used to improve productivity, ensure tasks are not forgotten, and help users stay organized. 
