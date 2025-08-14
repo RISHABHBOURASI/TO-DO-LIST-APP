@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-list-check"></i> My To-Do App</a>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="container mt-3" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">To-Do List</li>
+    </ol>
+  </nav>
+
+  <!-- Carousel (Motivation Quotes) -->
+  <div id="carouselExample" class="carousel slide container mt-3">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="home1.jpg" class="d-block w-100 rounded" alt="Motivation 1">
+      </div>
+      <div class="carousel-item">
+        <img src="home2.jpg" class="d-block w-100 rounded" alt="Motivation 2">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- To-Do Card -->
+  <div class="container mt-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title">Add New Task <span class="badge bg-primary">To-Do</span></h5>
+        <div class="input-group mb-3">
+          <input type="text" id="taskInput" class="form-control" placeholder="Enter task...">
+          <button class="btn btn-success" id="addTaskBtn"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+
+        <!-- Button Group -->
+        <div class="btn-group mb-3">
+          <button class="btn btn-outline-primary" id="allTasks">All</button>
+          <button class="btn btn-outline-success" id="completedTasks">Completed</button>
+          <button class="btn btn-outline-warning" id="pendingTasks">Pending</button>
+        </div>
+
+        <!-- Collapse -->
+        <p>
+          <a class="btn btn-info text-white" data-bs-toggle="collapse" href="#instructions" role="button">
+            Show Instructions
+          </a>
+        </p>
+        <div class="collapse" id="instructions">
+          <div class="card card-body">
+            Type your task, click Add, and use the buttons to filter tasks.
+          </div>
+        </div>
+
+        <!-- List Group -->
+        <ul class="list-group" id="taskList"></ul>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
